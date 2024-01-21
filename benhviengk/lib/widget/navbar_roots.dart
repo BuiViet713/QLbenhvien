@@ -1,11 +1,11 @@
+import 'package:benhviengk/screens/chat_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:benhviengk/screens/home_screen.dart';
-// import 'package:healthcare/screens/messages_screen.dart';
-// import 'package:healthcare/screens/schedule_screen.dart';
 import 'package:benhviengk/screens/settings_screen.dart';
-import 'package:benhviengk/screens/benhnhan.dart';
-import 'package:benhviengk/screens/listroom.dart';
+import "package:benhviengk/screens/BenhNhan/benhnhan.dart";
+import 'package:benhviengk/screens/PhongBenh/DanhSachPhongBenh.dart';
+
 
 class NavBarRoots extends StatefulWidget {
   @override
@@ -16,10 +16,9 @@ class _NavBarRootsState extends State<NavBarRoots> {
   int _selectedIndex = 0;
   final _screens = [
     HomeScreen(),
-    // MessagesScreen(),
-    // ScheduleScreen(),
-    DSbenhnhan(),
-    ListRoom(),
+    DSBenhNhan(),
+    DanhSachPhongBenh(),
+    ChatScreen(),
     SettingScreen(),
   ];
 
@@ -50,11 +49,13 @@ class _NavBarRootsState extends State<NavBarRoots> {
                 icon: Icon(Icons.home_filled), label: "Home"),
             BottomNavigationBarItem(
                 icon: Icon(
-                  CupertinoIcons.chat_bubble_text_fill,
+                  CupertinoIcons.person_2_square_stack_fill,
                 ),
-                label: "Messages"),
+                label: "Bệnh Nhân"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.calendar_month_outlined), label: "Schedule"),
+                icon: Icon(Icons.local_hospital), label: "Phòng bệnh"),
+                 BottomNavigationBarItem(
+                icon: Icon(Icons.message), label: "Hỗ Trợ"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.settings), label: "Settings"),
           ],

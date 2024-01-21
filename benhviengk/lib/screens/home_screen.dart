@@ -1,4 +1,6 @@
-import 'package:flutter/cupertino.dart';
+import 'package:benhviengk/screens/PhongBenh/DanhSachPhongBenh.dart';
+import 'package:benhviengk/screens/BenhNhan/benhnhan.dart';
+// import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:benhviengk/screens/appointment_screen.dart';
 
@@ -33,7 +35,7 @@ class HomeScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Hello Quốc Việt",
+                    "Xin Chào Quốc Việt",
                     style: TextStyle(
                       fontSize: 35,
                       fontWeight: FontWeight.w500,
@@ -51,7 +53,14 @@ class HomeScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => DSBenhNhan()                         
+                            )
+                      );
+                    },
                   child: Container(
                     padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
@@ -75,14 +84,14 @@ class HomeScreen extends StatelessWidget {
                             shape: BoxShape.circle,
                           ),
                           child: Icon(
-                            Icons.add,
+                            Icons.perm_contact_cal_rounded,
                             color: Color(0xFF7165D6),
                             size: 35,
                           ),
                         ),
                         SizedBox(height: 30),
                         Text(
-                          "Clinic Visit",
+                          "Bệnh Nhân",
                           style: TextStyle(
                             fontSize: 18,
                             color: Colors.white,
@@ -91,7 +100,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                         SizedBox(height: 5),
                         Text(
-                          "Make an appointment",
+                          "Bệnh nhân mới nhập viện",
                           style: TextStyle(
                             color: Colors.white54,
                           ),
@@ -101,7 +110,13 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => DanhSachPhongBenh(),
+                          ));
+                    },
                   child: Container(
                     padding: EdgeInsets.all(20),
                     decoration: BoxDecoration(
@@ -125,14 +140,14 @@ class HomeScreen extends StatelessWidget {
                             shape: BoxShape.circle,
                           ),
                           child: Icon(
-                            Icons.home_filled,
+                            Icons.add_home_work_sharp,
                             color: Color(0xFF7165D6),
                             size: 35,
                           ),
                         ),
                         SizedBox(height: 30),
                         Text(
-                          "Home Visit",
+                          "Phòng Bệnh",
                           style: TextStyle(
                             fontSize: 18,
                             color: Colors.black,
@@ -141,7 +156,8 @@ class HomeScreen extends StatelessWidget {
                         ),
                         SizedBox(height: 5),
                         Text(
-                          "Call the doctor home",
+                          "Các khoa điều trị",
+                          
                           style: TextStyle(
                             color: Colors.black54,
                           ),
@@ -156,7 +172,7 @@ class HomeScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 15),
               child: Text(
-                "What are your symptoms?",
+                "Bạn có triệu chứng gì ?",
                 style: TextStyle(
                   fontSize: 23,
                   fontWeight: FontWeight.w500,
@@ -204,7 +220,7 @@ class HomeScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 15),
               child: Text(
-                "Popular Doctors",
+                "Đề Xuất",
                 style: TextStyle(
                   fontSize: 23,
                   fontWeight: FontWeight.w500,
@@ -259,7 +275,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          "Therapist",
+                          "Bác sĩ đa khoa",
                           style: TextStyle(
                             color: Colors.black45,
                           ),

@@ -117,6 +117,7 @@ class SettingScreen extends StatelessWidget {
                 color: Colors.green,
                 size: 35,
               ),
+              
             ),
             title: Text(
               "General",
@@ -126,6 +127,7 @@ class SettingScreen extends StatelessWidget {
               ),
             ),
             trailing: Icon(Icons.arrow_forward_ios_rounded),
+            
           ),
           SizedBox(height: 20),
           ListTile(

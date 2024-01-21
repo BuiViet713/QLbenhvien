@@ -5,6 +5,7 @@ class BenhNhan {
   final int soPhong;
   final String Khoa;
   final String BenhAn;
+  final String TrangThai;
 
   BenhNhan({
     required this.ma,
@@ -12,7 +13,8 @@ class BenhNhan {
     required this.ngaySinh,
     required this.soPhong,
     required this.Khoa,
-    required this.BenhAn
+    required this.BenhAn,
+    required this.TrangThai,
   });
 
 }

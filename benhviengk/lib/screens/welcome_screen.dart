@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:benhviengk/screens/home_screen.dart';
 import 'package:benhviengk/screens/login_screen.dart';
 import 'package:benhviengk/screens/sign_up_screen.dart';
 import 'package:benhviengk/widget/navbar_roots.dart';
@@ -44,7 +43,7 @@ class WelcomeScreen extends StatelessWidget {
             ),
             SizedBox(height: 50),
             Text(
-              "Doctors Appointment",
+            "Quản Lý Bệnh Viện",
               style: TextStyle(
                 color: Color(0xFF7165D6),
                 fontSize: 35,
@@ -55,7 +54,7 @@ class WelcomeScreen extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Text(
-              "Appoint Your Doctor",
+              "Nhóm 10",
               style: TextStyle(
                 color: Colors.black54,
                 fontSize: 18,
