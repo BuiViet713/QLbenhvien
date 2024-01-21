@@ -136,23 +136,26 @@ class _DSBenhNhanState extends State<DSBenhNhan> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        title: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 50),
+          child: Text(
+            "Danh sách Bệnh Nhân",
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              color: Color.fromARGB(255, 0, 0, 0),
+            ),
+          ),
+        ),
+      ),
       body:SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.only(top: 40),
+          padding: EdgeInsets.symmetric( horizontal: 5),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 15),
-                child: Text(
-                  "Bệnh Nhân",
-                  style: TextStyle(
-                    fontSize: 32,
-                    fontWeight: FontWeight.w500,
-                    color: Color.fromARGB(255, 0, 0, 0),
-                  ),
-                ),
-              ),
               SizedBox(height: 20,),
               Container(
                 padding: EdgeInsets.all(5),
@@ -244,7 +247,7 @@ class _DSBenhNhanState extends State<DSBenhNhan> {
               ),
               SizedBox(height: 30),
               getBodyWidget(_buttonIndex),
-            ], 
+            ],
           ),
         ),
       ) ,
@@ -258,5 +261,6 @@ class _DSBenhNhanState extends State<DSBenhNhan> {
     );
   }
 }
+
 
 

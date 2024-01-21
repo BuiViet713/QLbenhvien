@@ -46,7 +46,7 @@ class _NavBarRootsState extends State<NavBarRoots> {
           },
           items: [
             BottomNavigationBarItem(
-                icon: Icon(Icons.home_filled), label: "Home"),
+                icon: Icon(Icons.home_filled), label: "Trang chủ"),
             BottomNavigationBarItem(
                 icon: Icon(
                   CupertinoIcons.person_2_square_stack_fill,
@@ -57,7 +57,7 @@ class _NavBarRootsState extends State<NavBarRoots> {
                  BottomNavigationBarItem(
                 icon: Icon(Icons.message), label: "Hỗ Trợ"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.settings), label: "Settings"),
+                icon: Icon(Icons.settings), label: "Cài Đặt"),
           ],
         ),
       ),

@@ -15,7 +15,7 @@ class _FormThemBenhNhanState extends State<FormThemBenhNhan> {
   final TextEditingController Khoa = TextEditingController();
   final TextEditingController BenhAn = TextEditingController();
   final TextEditingController ma = TextEditingController();
-  final TextEditingController TrangThai = TextEditingController();
+  String TrangThai = "Nhập viện";
   void submitdataBenhNhan() {
     final enterma = ma.text;
     final enterhoVaTen = hoVaTen.text;
@@ -23,7 +23,7 @@ class _FormThemBenhNhanState extends State<FormThemBenhNhan> {
     final entersoPhong = soPhong.text;
     final enterKhoa = Khoa.text;
     final enterBenhAn = BenhAn.text;
-    final enterTrangThai = TrangThai.text;
+    final enterTrangThai = TrangThai;
       widget.AddBenhNhan(
         int.tryParse(enterma),
         enterhoVaTen,
@@ -56,9 +56,10 @@ class _FormThemBenhNhanState extends State<FormThemBenhNhan> {
     return Container(
       child: Card(
         elevation: 6,
+        child: SingleChildScrollView(
         child: Container(
-          height: 700,
-          padding: EdgeInsets.all(5),
+          height: 1500,
+          padding: EdgeInsets.all(10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
@@ -82,8 +83,7 @@ class _FormThemBenhNhanState extends State<FormThemBenhNhan> {
                       lastDate: DateTime.now(),
                     );
                     if (pickedDate != null && pickedDate != _ngaySinh) {
-                      setState(() {
-                        _ngaySinh = pickedDate;
+                      setState(() {_ngaySinh = pickedDate;
                       }
                       );
                     }
@@ -103,9 +103,24 @@ class _FormThemBenhNhanState extends State<FormThemBenhNhan> {
                 decoration: InputDecoration(labelText: 'Bệnh án: '),
                 controller: BenhAn,
               ),
-              TextField(
-                decoration: InputDecoration(labelText: 'Trạng thái: '),
-                controller: TrangThai,
+              Row(
+                children: [
+                  Text("Chọn trạng thái: "),
+                  DropdownButton<String>(
+                    value: TrangThai,
+                    onChanged: (String? newValue1) {
+                      setState(() {
+                        TrangThai = newValue1!;
+                      });
+                    },
+                    items: <String>['Nhập viện', 'Xuất viện'].map((String value1) {
+                      return DropdownMenuItem<String>(
+                        value: value1,
+                        child: Text(value1),
+                      );
+                    }).toList(),
+                  ),
+                ],
               ),
               TextButton(
                 child: Text('Thêm bệnh nhân'),
@@ -118,6 +133,7 @@ class _FormThemBenhNhanState extends State<FormThemBenhNhan> {
             ],
           ),
         ),
+      ),
       ),
     );
   }

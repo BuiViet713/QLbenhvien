@@ -7,11 +7,11 @@ import 'package:benhviengk/screens/appointment_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   List symptoms = [
-    "Temperature",
-    "Snuffle",
-    "Fever",
-    "Cough",
-    "Cold",
+    "Đau cổ",
+    "Sốt",
+    "Đau đầu",
+    "Khó thở",
+    "Lạnh",
   ];
 
   List imgs = [
