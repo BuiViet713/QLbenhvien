@@ -1,8 +1,7 @@
 import 'package:benhviengk/screens/PhongBenh/DanhSachPhongBenh.dart';
 import 'package:benhviengk/screens/BenhNhan/benhnhan.dart';
-// import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:benhviengk/screens/appointment_screen.dart';
+
 
 
 class HomeScreen extends StatelessWidget {
@@ -238,11 +237,6 @@ class HomeScreen extends StatelessWidget {
               itemBuilder: (context, index) {
                 return InkWell(
                   onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => AppointmentScreen(),
-                        ));
                   },
                   child: Container(
                     margin: EdgeInsets.all(10),
